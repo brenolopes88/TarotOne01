@@ -7,6 +7,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 
 @Composable
 fun TarotOneApp() {
@@ -31,6 +34,21 @@ fun TarotOneApp() {
                     CardDetailScreen(cardId, navController)
                 }
             }
+            composable(
+                route = "detailspread/{count}",
+                arguments = listOf(navArgument("count") { type = NavType.IntType }) // Declare the argument type
+            ) { backStackEntry ->
+                val spreadCount = backStackEntry.arguments?.getInt("count")
+                if (spreadCount != null) {
+                    SpreadDetailScreen(count = spreadCount, title = "Today's Spread")
+                }
+            }
         }
     }
+}
+
+@Preview
+@Composable
+fun TarotOneAppPreview() {
+    TarotOneApp()
 }
