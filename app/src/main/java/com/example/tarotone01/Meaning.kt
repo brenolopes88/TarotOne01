@@ -37,10 +37,9 @@ import com.example.tarotone01.cards.wandsCards
 
 @Composable
 fun ArchiveScreen(navController: NavHostController) {
+
     val allCards = listOf(majorArcanaCards, wandsCards, swordsCards, cupsCards, pentaclesCards)
-
-
-    val tabsTitle = listOf("Major Arcana","Pentacles", "Swords", "Wands", "Cups"  )
+    val tabsTitle = listOf("Major Arcana", "Pentacles", "Swords", "Wands", "Cups")
     val tabState = remember { mutableIntStateOf(0) }
 
     ScrollableTabRow(
@@ -48,13 +47,12 @@ fun ArchiveScreen(navController: NavHostController) {
         modifier = Modifier.fillMaxWidth(),
     ) {
         tabsTitle.forEachIndexed { index, title ->
-            Tab(
-                selected = tabState.intValue == index,
+            Tab(selected = tabState.intValue == index,
                 onClick = { tabState.intValue = index },
-                text = { Text(text = title, style = MaterialTheme.typography.labelLarge) }
-            )
+                text = { Text(text = title, style = MaterialTheme.typography.labelLarge) })
         }
     }
+
     when (tabState.intValue) {
         0 -> AllCardsTabContent(allCards[4], navController)
         1 -> AllCardsTabContent(allCards[2], navController)
@@ -64,6 +62,7 @@ fun ArchiveScreen(navController: NavHostController) {
         5 -> AllCardsTabContent(TarotDeck, navController)
     }
 }
+
 @Composable
 fun AllCardsTabContent(list: List<TarotCardDetail>, navController: NavHostController) {
 
@@ -75,23 +74,19 @@ fun AllCardsTabContent(list: List<TarotCardDetail>, navController: NavHostContro
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(list) { item ->
-            Box(
-                modifier = Modifier
-                    .height(230.dp)
-                    .background(Color.Transparent, shape = RoundedCornerShape(8.dp))
-                    .clickable {
-                        navController.navigate("detail/${item.id}")
-                    }
-            ) {
+            Box(modifier = Modifier
+                .height(230.dp)
+                .background(Color.Transparent, shape = RoundedCornerShape(8.dp))
+                .clickable {
+                    navController.navigate("detail/${item.id}")
+                }) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Image(
                         painter = painterResource(id = item.imageResId),
                         contentDescription = item.title,
-                        modifier = Modifier
-                            .height(165.dp)
-                        //.wrapContentWidth()
+                        modifier = Modifier.height(165.dp)
                     )
                     Text(
                         item.title,

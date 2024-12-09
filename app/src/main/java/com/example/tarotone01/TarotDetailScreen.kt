@@ -41,47 +41,44 @@ fun CardDetailScreen(cardId: String = "major_02", navController: NavHostControll
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        //.verticalScroll(rememberScrollState()),
 
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top
+        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Top
     ) {
         item {
             if (card != null) {
                 Text(
-                    text = card.title,
-                    style = MaterialTheme.typography.headlineMedium
+                    text = card.title, style = MaterialTheme.typography.headlineMedium
                 )
+
                 Spacer(modifier = Modifier.height(16.dp))
+
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .size(200.dp),
-                    Alignment.Center
+                        .size(200.dp), Alignment.Center
                 ) {
                     Row() {
-                        Image(
-                            painter = painterResource(id = card.imageResId),
+                        Image(painter = painterResource(id = card.imageResId),
                             contentDescription = card.title,
                             modifier = Modifier
                                 .padding(24.dp)
-                                .clickable { isUpright = true }
-                        )
-                        Image(
-                            painter = painterResource(id = card.imageResId),
+                                .clickable { isUpright = true })
+                        Image(painter = painterResource(id = card.imageResId),
                             contentDescription = card.title,
                             modifier = Modifier
                                 .padding(24.dp)
                                 .graphicsLayer(rotationZ = 180f)
-                                .clickable { isUpright = false }
-                        )
+                                .clickable { isUpright = false })
                     }
                 }
+
                 Spacer(modifier = Modifier.height(16.dp))
+
                 Text(
                     text = if (isUpright) "Upright" else "Reversed",
                     style = MaterialTheme.typography.bodyLarge
                 )
+
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
@@ -91,15 +88,13 @@ fun CardDetailScreen(cardId: String = "major_02", navController: NavHostControll
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-
                 Text(
                     text = buildAnnotatedString {
                         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                             append("History: ")
                         }
                         append(card.history)
-                    },
-                    style = MaterialTheme.typography.bodyLarge
+                    }, style = MaterialTheme.typography.bodyLarge
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
@@ -109,8 +104,7 @@ fun CardDetailScreen(cardId: String = "major_02", navController: NavHostControll
                             append("Meaning: ")
                         }
                         append(if (isUpright) card.meaningUpright else card.meaningReversed)
-                    },
-                    style = MaterialTheme.typography.bodyLarge
+                    }, style = MaterialTheme.typography.bodyLarge
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
@@ -124,16 +118,11 @@ fun CardDetailScreen(cardId: String = "major_02", navController: NavHostControll
                                 ", "
                             )
                         )
-                    },
-                    style = MaterialTheme.typography.bodyLarge
+                    }, style = MaterialTheme.typography.bodyLarge
                 )
-
-
             } else {
                 Text(text = "Card not found")
             }
         }
-
-
     }
 }

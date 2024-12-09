@@ -20,7 +20,8 @@ fun HomeScreen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
-        SpreadDetailScreen(3 , title = "Cartas do Dia ")
+        SpreadDetailScreen(3, title = "Cartas do Dia ")
+
     }
 }
 
@@ -44,12 +45,8 @@ fun MeaningScreen(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
             .padding(8.dp),
-        //.verticalScroll(rememberScrollState()),
-
     ) {
-
         ArchiveScreen(navController)
-
 
     }
 

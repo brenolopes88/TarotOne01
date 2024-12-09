@@ -32,13 +32,11 @@ import com.example.tarotone01.cards.TarotCardDetail
 import com.example.tarotone01.cards.TarotDeck
 import kotlin.String
 
-
 @Composable
 fun SpreadDetailScreen(count: Int, cards: List<TarotCardDetail> = TarotDeck, title: String) {
+
     val shuffledCards = remember { cards.shuffled().toTypedArray() }
     val todaysCards = shuffledCards.take(count)
-
-    // State to track the selected card
     val selectedCard = remember { mutableStateOf<TarotCardDetail?>(null) }
 
     Column(
@@ -61,21 +59,18 @@ fun SpreadDetailScreen(count: Int, cards: List<TarotCardDetail> = TarotDeck, tit
                 .height(280.dp)
         ) {
             items(todaysCards) { card ->
-                // Check if the card is selected
                 val isSelected = selectedCard.value == card
 
-                Box(
-                    modifier = Modifier
-                        .height(if (isSelected) 250.dp else 230.dp) // Increase size if selected
-                        .width(if (isSelected) 150.dp else 130.dp) // Increase size if selected
-                        .clickable { selectedCard.value = card } // Set the selected card on click
-                        .border(
-                            width = if (isSelected) 2.dp else 1.dp, // Add border for selected card
-                            color = if (isSelected) MaterialTheme.colorScheme.primary else Color.Gray,
-                            shape = RoundedCornerShape(8.dp)
-                        )
-                        .padding(8.dp)
-                ) {
+                Box(modifier = Modifier
+                    .height(if (isSelected) 250.dp else 230.dp) // Increase size if selected
+                    .width(if (isSelected) 150.dp else 130.dp) // Increase size if selected
+                    .clickable { selectedCard.value = card } // Set the selected card on click
+                    .border(
+                        width = if (isSelected) 2.dp else 1.dp, // Add border for selected card
+                        color = if (isSelected) MaterialTheme.colorScheme.primary else Color.Gray,
+                        shape = RoundedCornerShape(8.dp)
+                    )
+                    .padding(8.dp)) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
                             text = card.title,
@@ -93,7 +88,6 @@ fun SpreadDetailScreen(count: Int, cards: List<TarotCardDetail> = TarotDeck, tit
             }
         }
 
-        // Display additional information for the selected card
         selectedCard.value?.let { card ->
             Column(
                 modifier = Modifier.fillMaxWidth(),

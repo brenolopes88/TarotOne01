@@ -20,11 +20,7 @@ val cupsCards = listOf(
         Reversed, this card may indicate emotional blockages, unrequited love, or difficulty in expressing emotions. It suggests working on emotional healing and self-love.
     """.trimIndent(),
         keywordsUpright = listOf(
-            "Love",
-            "Compassion",
-            "Emotional Renewal",
-            "Relationships",
-            "Creativity"
+            "Love", "Compassion", "Emotional Renewal", "Relationships", "Creativity"
         ),
         keywordsReversed = listOf("Blocked Emotions", "Unrequited Love", "Emotional Healing"),
         element = "Water",
@@ -32,8 +28,7 @@ val cupsCards = listOf(
         associatedNumerology = 1,
         associatedSign = "Cancer",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_02",
         title = "Two of Cups",
         upDescription = "The Two of Cups represents partnership, harmony, and mutual respect in relationships.",
@@ -55,8 +50,7 @@ val cupsCards = listOf(
         associatedNumerology = 2,
         associatedSign = "Cancer",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_03",
         title = "Three of Cups",
         upDescription = "The Three of Cups symbolizes celebration, friendship, and shared joy.",
@@ -78,8 +72,7 @@ val cupsCards = listOf(
         associatedNumerology = 3,
         associatedSign = "Cancer",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_04",
         title = "Four of Cups",
         upDescription = "The Four of Cups represents introspection, contemplation, and the need to reassess opportunities.",
@@ -101,8 +94,7 @@ val cupsCards = listOf(
         associatedNumerology = 4,
         associatedSign = "Cancer",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_05",
         title = "Five of Cups",
         upDescription = "The Five of Cups represents loss, disappointment, and focusing on the negative while overlooking remaining opportunities.",
@@ -124,8 +116,7 @@ val cupsCards = listOf(
         associatedNumerology = 5,
         associatedSign = "Scorpio",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_06",
         title = "Six of Cups",
         upDescription = "The Six of Cups represents nostalgia, childhood memories, and the simple joys of the past.",
@@ -147,8 +138,7 @@ val cupsCards = listOf(
         associatedNumerology = 6,
         associatedSign = "Scorpio",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_07",
         title = "Seven of Cups",
         upDescription = "The Seven of Cups represents choices, dreams, and the challenge of discerning reality from illusion.",
@@ -170,8 +160,7 @@ val cupsCards = listOf(
         associatedNumerology = 7,
         associatedSign = "Scorpio",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_08",
         title = "Eight of Cups",
         upDescription = "The Eight of Cups represents leaving behind what no longer serves you to pursue personal fulfillment.",
@@ -193,8 +182,7 @@ val cupsCards = listOf(
         associatedNumerology = 8,
         associatedSign = "Pisces",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_09",
         title = "Nine of Cups",
         upDescription = "The Nine of Cups represents contentment, satisfaction, and emotional fulfillment.",
@@ -216,8 +204,7 @@ val cupsCards = listOf(
         associatedNumerology = 9,
         associatedSign = "Pisces",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_10",
         title = "Ten of Cups",
         upDescription = "The Ten of Cups represents harmony, family happiness, and emotional fulfillment on a deep level.",
@@ -239,8 +226,7 @@ val cupsCards = listOf(
         associatedNumerology = 10,
         associatedSign = "Pisces",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_page",
         title = "Page of Cups",
         upDescription = "The Page of Cups represents emotional openness, curiosity, and the beginning of creative or emotional exploration.",
@@ -262,8 +248,7 @@ val cupsCards = listOf(
         associatedNumerology = 11,
         associatedSign = "Pisces",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_knight",
         title = "Knight of Cups",
         upDescription = "The Knight of Cups represents romanticism, creativity, and pursuing one’s dreams with passion and grace.",
@@ -285,8 +270,7 @@ val cupsCards = listOf(
         associatedNumerology = 12,
         associatedSign = "Scorpio",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_queen",
         title = "Queen of Cups",
         upDescription = "The Queen of Cups represents emotional intelligence, compassion, and intuitive wisdom.",
@@ -308,8 +292,7 @@ val cupsCards = listOf(
         associatedNumerology = 13,
         associatedSign = "Cancer",
         suit = "Cups"
-    ),
-    TarotCardDetail(
+    ), TarotCardDetail(
         id = "cups_king",
         title = "King of Cups",
         upDescription = "The King of Cups represents emotional mastery, diplomacy, and the balance of intellect and feelings.",
