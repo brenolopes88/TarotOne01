@@ -1,8 +1,11 @@
-package com.example.tarotone01
+package com.example.tarotone01.cards
+
+import com.example.tarotone01.R
 
 
 val wandsCards = listOf(
-    TarotCardDetail(id = "wands_01",
+    TarotCardDetail(
+        id = "wands_01",
         title = "Ace of Wands",
         upDescription = "The Ace of Wands symbolizes inspiration, potential, and the spark of new beginnings.",
         revDescription = "to do ",

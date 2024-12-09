@@ -1,5 +1,6 @@
-package com.example.tarotone01
+package com.example.tarotone01.cards
 
+import com.example.tarotone01.cupsCards
 
 
 class TarotCardDetail(
@@ -21,7 +22,7 @@ class TarotCardDetail(
     val upright: Boolean = false // Whether the card is upright or reversed
 )
 
-val TarotDeck = majorArcanaCards +  wandsCards + swordsCards + cupsCards + pentaclesCards
+val TarotDeck = majorArcanaCards + wandsCards + swordsCards + cupsCards + pentaclesCards
 
 data class TarotCategory(
     val title: String,

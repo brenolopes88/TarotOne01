@@ -1,4 +1,6 @@
-package com.example.tarotone01
+package com.example.tarotone01.cards
+
+import com.example.tarotone01.R
 
 
 var majorArcanaCards = listOf(

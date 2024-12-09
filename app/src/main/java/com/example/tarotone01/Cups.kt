@@ -1,5 +1,7 @@
 package com.example.tarotone01
 
+import com.example.tarotone01.cards.TarotCardDetail
+
 
 val cupsCards = listOf(
     TarotCardDetail(
@@ -17,7 +19,13 @@ val cupsCards = listOf(
         meaningReversed = """
         Reversed, this card may indicate emotional blockages, unrequited love, or difficulty in expressing emotions. It suggests working on emotional healing and self-love.
     """.trimIndent(),
-        keywordsUpright = listOf("Love", "Compassion", "Emotional Renewal", "Relationships", "Creativity"),
+        keywordsUpright = listOf(
+            "Love",
+            "Compassion",
+            "Emotional Renewal",
+            "Relationships",
+            "Creativity"
+        ),
         keywordsReversed = listOf("Blocked Emotions", "Unrequited Love", "Emotional Healing"),
         element = "Water",
         planet = "Venus",
