@@ -1,6 +1,5 @@
 package com.example.tarotone01.cards
 
-import com.example.tarotone01.cupsCards
 
 
 class TarotCardDetail(
