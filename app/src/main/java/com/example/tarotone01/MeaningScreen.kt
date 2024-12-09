@@ -1,4 +1,4 @@
-package com.example.tarotone01.cards
+package com.example.tarotone01
 
 
 import androidx.compose.foundation.Image
@@ -28,11 +28,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.tarotone01.cupsCards
+import com.example.tarotone01.cards.TarotCardDetail
+import com.example.tarotone01.cards.TarotDeck
+import com.example.tarotone01.cards.majorArcanaCards
+import com.example.tarotone01.cards.pentaclesCards
+import com.example.tarotone01.cards.swordsCards
+import com.example.tarotone01.cards.wandsCards
 
 @Composable
 fun ArchiveScreen(navController: NavHostController) {
-    val allCards = listOf(majorArcanaCards ,  wandsCards , swordsCards , cupsCards, pentaclesCards)
+    val allCards = listOf(majorArcanaCards, wandsCards, swordsCards, cupsCards, pentaclesCards)
 
 
     val tabsTitle = listOf("Major Arcana","Pentacles", "Swords", "Wands", "Cups"  )
