@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.tarotone01"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.tarotone01"
@@ -41,6 +41,7 @@ android {
 
 dependencies {
 
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -56,4 +57,24 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.compose.material:material:")
+    implementation("androidx.navigation:navigation-compose:")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:")
+    // For making HTTP requests
+    implementation( "com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
+    implementation( "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
+    implementation( "com.squareup.retrofit2:retrofit:2.9.0")
+    implementation( "com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation( "com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    // For Kotlin Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:")
+
+    // For JSON parsing (optional if you use JSONObject as in the example)
+    implementation ("com.google.code.gson:gson:")
+    implementation ("androidx.compose.ui:ui:1.5.1")
+    implementation ("androidx.compose.material:material:1.5.1")
+    implementation ("androidx.compose.ui:ui-tooling-preview:1.5.1")
+    implementation ("androidx.navigation:navigation-compose:2.7.2")
 }
