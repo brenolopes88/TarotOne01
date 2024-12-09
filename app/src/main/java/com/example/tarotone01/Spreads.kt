@@ -72,17 +72,24 @@ fun SpreadDetailScreen(count: Int, cards: List<TarotCardDetail> = TarotDeck, tit
                     )
                     .padding(8.dp)) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(
-                            text = card.title,
-                            style = MaterialTheme.typography.bodyMedium,
-                            textAlign = TextAlign.Center
-                        )
+                        Box(modifier = Modifier.height(35.dp)) {
+                            Text(
+                                text = card.title,
+                                style = MaterialTheme.typography.bodyMedium,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+
                         Spacer(modifier = Modifier.height(8.dp))
-                        Image(
-                            painter = painterResource(id = card.imageResId),
-                            contentDescription = card.title,
-                            modifier = Modifier.size(if (isSelected) 175.dp else 150.dp)
-                        )
+
+                        Box(modifier = Modifier.height(165.dp)){
+                            Image(
+                                painter = painterResource(id = card.imageResId),
+                                contentDescription = card.title,
+                                modifier = Modifier.size(if (isSelected) 175.dp else 150.dp)
+                            )
+                        }
+
                     }
                 }
             }
