@@ -38,7 +38,7 @@ import com.example.tarotone01.cards.wandsCards
 @Composable
 fun ArchiveScreen(navController: NavHostController) {
 
-    val allCards = listOf(majorArcanaCards, wandsCards, swordsCards, cupsCards, pentaclesCards)
+    val allCards = listOf(majorArcanaCards, pentaclesCards, swordsCards,wandsCards, cupsCards, )
     val tabsTitle = listOf("Major Arcana", "Pentacles", "Swords", "Wands", "Cups")
     val tabState = remember { mutableIntStateOf(0) }
 
@@ -54,11 +54,11 @@ fun ArchiveScreen(navController: NavHostController) {
     }
 
     when (tabState.intValue) {
-        0 -> AllCardsTabContent(allCards[4], navController)
-        1 -> AllCardsTabContent(allCards[2], navController)
-        2 -> AllCardsTabContent(allCards[1], navController)
+        0 -> AllCardsTabContent(allCards[0], navController)
+        1 -> AllCardsTabContent(allCards[1], navController)
+        2 -> AllCardsTabContent(allCards[2], navController)
         3 -> AllCardsTabContent(allCards[3], navController)
-        4 -> AllCardsTabContent(allCards[0], navController)
+        4 -> AllCardsTabContent(allCards[4], navController)
         5 -> AllCardsTabContent(TarotDeck, navController)
     }
 }
